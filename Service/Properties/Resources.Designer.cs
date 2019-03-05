@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MapQuery.Properties {
+namespace Service.Properties {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace MapQuery.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,10 +36,10 @@ namespace MapQuery.Properties {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MapQuery.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Service.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -51,7 +51,7 @@ namespace MapQuery.Properties {
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace MapQuery.Properties {
         /// <summary>
         ///   查找类似 http://api.map.baidu.com 的本地化字符串。
         /// </summary>
-        internal static string BaiduMapBaseUrl {
+        public static string BaiduMapBaseUrl {
             get {
                 return ResourceManager.GetString("BaiduMapBaseUrl", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace MapQuery.Properties {
         /// <summary>
         ///   查找类似 /geocoder/v2/ 的本地化字符串。
         /// </summary>
-        internal static string BaiduMapGeocoder {
+        public static string BaiduMapGeocoder {
             get {
                 return ResourceManager.GetString("BaiduMapGeocoder", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace MapQuery.Properties {
         /// <summary>
         ///   查找类似 /place/v2/search 的本地化字符串。
         /// </summary>
-        internal static string BaiduMapPlaceSearch {
+        public static string BaiduMapPlaceSearch {
             get {
                 return ResourceManager.GetString("BaiduMapPlaceSearch", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace MapQuery.Properties {
         /// <summary>
         ///   查找类似 Y1XohU4UQoppPo2eRjmdm9ed72qPwKp9 的本地化字符串。
         /// </summary>
-        internal static string MyAk {
+        public static string MyAk {
             get {
                 return ResourceManager.GetString("MyAk", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace MapQuery.Properties {
         /// <summary>
         ///   查找类似 MapQuery 的本地化字符串。
         /// </summary>
-        internal static string MyAppName {
+        public static string MyAppName {
             get {
                 return ResourceManager.GetString("MyAppName", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace MapQuery.Properties {
         /// <summary>
         ///   查找类似 bsCILEjczffn6Fjfq9SXeyVjh5fGHljh 的本地化字符串。
         /// </summary>
-        internal static string MySk {
+        public static string MySk {
             get {
                 return ResourceManager.GetString("MySk", resourceCulture);
             }

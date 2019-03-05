@@ -1,18 +1,15 @@
-﻿using Service.proxy.baidu.dto;
-using System;
+﻿using Common.utils;
+using Service.Properties;
+using Service.proxy.baidu.dto;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.proxy.baidu
 {
     public class BaiduProxy
     {
-        public static PlaceSearchResponseDTO PlaceSearch(PlaceSearchRequestDTO placeSearchRequestDTO)
+        public static List<PlaceSearchResponseDTO> PlaceSearch(PlaceSearchRequestDTO placeSearchRequestDTO)
         {
-
-
+            
             return null;
         }
         

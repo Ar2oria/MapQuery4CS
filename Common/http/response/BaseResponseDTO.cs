@@ -8,16 +8,20 @@ namespace Common.http
         [DataMember]
         private int status;
         [DataMember]
-        private T result = default(T);
+        private string message;
+        [DataMember]
+        private T results = default(T);
 
         public BaseResponseDTO() { }
-        public BaseResponseDTO(int status, T result)
+        public BaseResponseDTO(int status, string message, T results)
         {
             this.status = status;
-            this.result = result;
+            this.message = message;
+            this.results = results;
         }
 
         public int Status { get => status; set => status = value; }
-        public T Result { get => result; set => result = value; }
+        public T Results { get => results; set => results = value; }
+        public string Message { get => message; set => message = value; }
     }
 }

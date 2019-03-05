@@ -47,5 +47,11 @@
     <Folder Include="entity\" />
     <Folder Include="vo\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7c326675-1d54-4330-8e92-50ef1cd63cf4}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

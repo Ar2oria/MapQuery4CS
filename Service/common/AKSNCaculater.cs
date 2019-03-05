@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.http.request;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -61,18 +62,12 @@ namespace Service.common
         public static string CaculateAKSN(string ak, string sk, string url, IDictionary<string, string> querystring_arrays)
         {
             var queryString = HttpBuildQuery(querystring_arrays);
-            return CaculateAKSN(ak, sk, url, queryString);
-        }
-
-        public static string CaculateAKSN(string ak, string sk, string url, string queryString)
-        {
-            var str = UrlEncode(url + "?" + queryString + sk);
+            var str = UrlEncode(url + "?" + queryString + "&ak=" + ak + sk);
             return MD5(str);
         }
-
-        public static string CaculateAKSN(string ak, string sk, string url, Object requestDTO)
+        public static string CaculateAKSN<T>(string ak, string sk, string url, T requestDTO) where T: BaseRequestDTO
         {
-            var str = UrlEncode(url + "?" + requestDTO.ToString() + sk);
+            var str = UrlEncode(url + "?" + requestDTO.ToString() + "&ak=" + ak + sk);
             return MD5(str);
         }
     }

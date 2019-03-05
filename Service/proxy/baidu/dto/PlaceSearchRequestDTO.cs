@@ -23,7 +23,7 @@ namespace Service.proxy.baidu.dto
         private String region;
 
         //区域数据召回限制，为true时，仅召回region对应区域内数据。
-        private Boolean cityLimit;
+        private Boolean city_limit;
 
         //输出格式为json或者xml
         private String output;
@@ -78,27 +78,14 @@ namespace Service.proxy.baidu.dto
          * 4（bd09mc即百度米制坐标）
             注："ll为小写LL"
         */
-        private int coordType;
+        private int coord_type;
 
         //可选参数，添加后POI返回国测局经纬度坐标
-        private String retCoordtype;
+        private String ret_coordtype;
 
         public PlaceSearchRequestDTO()
         {
-            coordType = (int)CoordTypeEnum.wgs84ll;
-        }
-
-        public PlaceSearchRequestDTO(string query, string tag, string region, bool cityLimit, string output, string scope, string filter, int coordType, string retCoordtype)
-        {
-            this.query = query;
-            this.tag = tag;
-            this.region = region;
-            this.CityLimit = cityLimit;
-            this.output = output;
-            this.scope = scope;
-            this.filter = filter;
-            this.CoordType = coordType;
-            this.retCoordtype = retCoordtype;
+            coord_type = (int)CoordTypeEnum.wgs84ll;
         }
 
         public string Query { get => query; set => query = value; }
@@ -107,9 +94,9 @@ namespace Service.proxy.baidu.dto
         public string Output { get => output; set => output = value; }
         public string Scope { get => scope; set => scope = value; }
         public string Filter { get => filter; set => filter = value; }
-        public int CoordType { get => coordType; set => coordType = value; }
-        public bool CityLimit { get => cityLimit; set => cityLimit = value; }
-        public string RetCoordtype { get => retCoordtype; set => retCoordtype = value; }
+        public int Coord_Type { get => coord_type; set => coord_type = value; }
+        public bool City_Limit { get => city_limit; set => city_limit = value; }
+        public string Ret_Coordtype { get => ret_coordtype; set => ret_coordtype = value; }
 
         public override string ToString()
         {

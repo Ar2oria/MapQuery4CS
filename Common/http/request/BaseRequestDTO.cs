@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using Common.utils;
+using System.Text;
 
 namespace Common.http.request
 {
@@ -15,7 +16,7 @@ namespace Common.http.request
                 var value = item.GetValue(this);
                 if(value != null)
                 {
-                    stringBuilder.Append(item.Name.ToLower()+"="+ value.ToString()+"&");
+                    stringBuilder.Append(EncodingUtil.UrlEncode(item.Name.ToLower())+"="+ EncodingUtil.UrlEncode(value.ToString())+"&");
                 }
             }
 
