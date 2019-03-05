@@ -1,4 +1,5 @@
-﻿using Common.utils;
+﻿using Common.http;
+using Common.utils;
 using Service.Properties;
 using Service.proxy.baidu.dto;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ namespace Service.proxy.baidu
     {
         public static List<PlaceSearchResponseDTO> PlaceSearch(PlaceSearchRequestDTO placeSearchRequestDTO)
         {
-            
+
             return null;
         }
         
