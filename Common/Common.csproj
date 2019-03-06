@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="http\response\BaseResponseDTO.cs" />
     <Compile Include="http\request\BaseRequestDTO.cs" />
+    <Compile Include="http\response\SingleResponseDTO.cs" />
     <Compile Include="http\response\StatusCode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\EncodingUtil.cs" />

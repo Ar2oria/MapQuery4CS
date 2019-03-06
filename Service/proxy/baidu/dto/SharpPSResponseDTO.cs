@@ -1,18 +1,14 @@
-﻿using Common.http;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Service.proxy.baidu.dto
 {
-    public class PlaceSearchResponseDTO
+    public class SharpPSResponseDTO
     {
-
-        public PlaceSearchResponseDTO() { }
-
+        public SharpPSResponseDTO() { }
         private string name;
         private Location location;
         private string address;
@@ -24,6 +20,7 @@ namespace Service.proxy.baidu.dto
         private string uid;
 
         public string Name { get => name; set => name = value; }
+        public Location Location { get => location; set => location = value; }
         public string Address { get => address; set => address = value; }
         public string Province { get => province; set => province = value; }
         public string City { get => city; set => city = value; }
@@ -31,6 +28,5 @@ namespace Service.proxy.baidu.dto
         public string Street_id { get => street_id; set => street_id = value; }
         public int Detail { get => detail; set => detail = value; }
         public string Uid { get => uid; set => uid = value; }
-        public Location Location { get => location; set => location = value; }
     }
 }

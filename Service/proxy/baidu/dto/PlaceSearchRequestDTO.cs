@@ -83,6 +83,42 @@ namespace Service.proxy.baidu.dto
         //可选参数，添加后POI返回国测局经纬度坐标
         private String ret_coordtype;
 
+        /**
+         * 圆形区域检索中心点，不支持多个点
+         * 38.76623,116.43213
+            lat<纬度>,lng<经度>
+         */
+        private string location;
+
+        /**
+         * 圆形区域检索半径，单位为米。(当半径过大，超过中心点所在城市边界时，会变为城市范围检索，检索范围为中心点所在城市）
+         * 1000（默认）
+         */
+        private string radius;
+
+        /**
+         * 是否严格限定召回结果在设置检索半径范围内。true（是），false（否）。设置为true时会影响返回结果中total准确性及每页召回poi数量，我们会逐步解决此类问题。
+         */
+        private string radius_limit;
+
+        /**
+         * 检索矩形区域，多组坐标间以","分隔
+         * 	38.76623,116.43213,39.54321,116.46773 lat,lng(左下角坐标),lat,lng(右上角坐标)
+         */
+        private string bounds;
+
+        /**
+         * 单次召回POI数量，默认为10条记录，最大返回20条。多关键字检索时，返回的记录数为关键字个数*page_size。
+         */
+        private int page_size = 10;
+
+        /**
+         * 分页页码，默认为0,0代表第一页，1代表第二页，以此类推。
+            常与page_size搭配使用。
+        */
+        private int page_num;
+
+
         public PlaceSearchRequestDTO()
         {
             coord_type = (int)CoordTypeEnum.wgs84ll;
@@ -97,20 +133,46 @@ namespace Service.proxy.baidu.dto
         public int Coord_Type { get => coord_type; set => coord_type = value; }
         public bool City_Limit { get => city_limit; set => city_limit = value; }
         public string Ret_Coordtype { get => ret_coordtype; set => ret_coordtype = value; }
+        public string Location { get => location; set => location = value; }
+        public string Radius { get => radius; set => radius = value; }
+        public string Radius_limit { get => radius_limit; set => radius_limit = value; }
+        public string Bounds { get => bounds; set => bounds = value; }
+        public int Page_size { get => page_size; set => page_size = value; }
+        public int Page_num { get => page_num; set => page_num = value; }
 
         public override string ToString()
         {
-            if(query==null)
-            {
-                throw new Exception("参数错误，query参数为空！");
-            }
-            if (region == null)
-            {
-                throw new Exception("参数错误，region参数为空！");
-            }
+
             if (output == null)
             {
                 throw new Exception("参数错误，请指定一种输出类型");
+            }
+            if (query==null)
+            {
+                throw new Exception("参数错误，query参数为空！");
+            }
+
+            int paramCount = 0;
+            if (region == null)
+            {
+                paramCount++;
+            }
+            if (location == null)
+            {
+                paramCount++;
+            }
+            if (bounds == null)
+            {
+                paramCount++;
+            }
+            switch (paramCount)
+            {
+                case 2:
+                    break;
+                case 3:
+                    throw new Exception("参数错误，地址位置region location bounds参数为空！");
+                default:
+                    throw new Exception("参数错误，地址位置region location bounds中只能填一项！");
             }
             
             return base.ToString();

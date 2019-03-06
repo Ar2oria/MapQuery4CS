@@ -1,26 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
-using Common.http.response;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Common.http
+namespace Common.http.response
 {
     [DataContract]
-    public class BaseResponseDTO<T>
+    public class SingleResponseDTO<T>
     {
         [DataMember]
         private int status;
         [DataMember]
         private string message;
         [DataMember]
-        private int total;
-        [DataMember]
-        private T results = default(T);
+        private T result = default(T);
 
-        public BaseResponseDTO() { }
+        public SingleResponseDTO() { }
 
         public int Status { get => status; set => status = value; }
-        public T Results { get => results; set => results = value; }
+        public T Result { get => result; set => result = value; }
         public string Message { get => message; set => message = value; }
-        public int Total { get => total; set => total = value; }
     }
 }
