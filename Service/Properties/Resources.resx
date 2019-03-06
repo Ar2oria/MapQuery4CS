@@ -123,6 +123,9 @@
   <data name="BaiduMapGeocoder" xml:space="preserve">
     <value>/geocoder/v2/</value>
   </data>
+  <data name="BaiduMapIPConvert" xml:space="preserve">
+    <value>/location/ip</value>
+  </data>
   <data name="BaiduMapPlaceSearch" xml:space="preserve">
     <value>/place/v2/search</value>
   </data>

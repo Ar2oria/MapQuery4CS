@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Service.common;
 using Service.proxy.baidu;
 using Service.proxy.baidu.dto;
 using System;
@@ -62,6 +63,14 @@ namespace Service.proxy.baidu.Tests
             rGeocoder.Pois = 1;
             rGeocoder.Output = "json";
             var result = BaiduProxy.RGeocoder(rGeocoder);
+        }
+
+        [TestMethod()]
+        public void IPConvertTest()
+        {
+            IPConvertRequestDTO iP = new IPConvertRequestDTO();
+            iP.Coor = GlobalConstant.RETCOORDTYPEGCJ02;
+            IPConvertResponseDTO addr = BaiduProxy.IPConvert(iP);
         }
     }
 }

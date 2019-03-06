@@ -56,6 +56,16 @@ namespace Service.proxy.baidu
             return obj.Result;
         }
 
+       public static IPConvertResponseDTO IPConvert(IPConvertRequestDTO iPConvertRequestDTO)
+        {
+            IPConvertResponseDTO obj = (IPConvertResponseDTO)BaseProxy.DoGetWithDeserilizeManual<IPConvertRequestDTO>(Resources.BaiduMapIPConvert, iPConvertRequestDTO, typeof(IPConvertResponseDTO));
+            if (obj == null)
+            {
+                throw new System.Exception("IPConvertResponseDTO函数异常====>解析异常！，请求参数" + iPConvertRequestDTO.ToString());
+            }
+            return obj;
+        }
+
 
     }
 }

@@ -19,8 +19,10 @@ namespace Common.http.request
                     stringBuilder.Append(EncodingUtil.UrlEncode(item.Name.ToLower())+"="+ EncodingUtil.UrlEncode(value.ToString())+"&");
                 }
             }
-
-            stringBuilder.Remove(stringBuilder.Length - 1, 1);
+            if (properties.Length > 0)
+            {
+                stringBuilder.Remove(stringBuilder.Length - 1, 1);
+            }
             return stringBuilder.ToString();
         }
     }

@@ -1,11 +1,12 @@
 ﻿using Service.Properties;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Service.proxy.baidu.dto;
+using Service.common;
 
 namespace Service.proxy.Tests
 {
     [TestClass()]
-    public class BaseProxyyTests
+    public class BaseProxyTests
     {
         [TestMethod()]
         public void DoGetTest()
@@ -53,6 +54,21 @@ namespace Service.proxy.Tests
             rGeocoderRequestDTO.Location = "35.658651,139.745415";
             rGeocoderRequestDTO.Output = "json";
             var response = BaseProxy.DoGet<RGeocoderRequestDTO>(Resources.BaiduMapGeocoder, rGeocoderRequestDTO);
+
+        }
+
+        [TestMethod()]
+        public void DoGetTest5()
+        {
+            var response = BaseProxy.DoGet(Resources.BaiduMapIPConvert);
+        }
+
+        [TestMethod()]
+        public void DoGetTest6()
+        {
+            IPConvertRequestDTO iP = new IPConvertRequestDTO();
+            iP.Coor = GlobalConstant.RETCOORDTYPEGCJ02;
+            var response = BaseProxy.DoGet<IPConvertRequestDTO>(Resources.BaiduMapIPConvert, iP);
 
         }
 

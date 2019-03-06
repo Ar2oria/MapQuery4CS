@@ -16,6 +16,10 @@ namespace Service.proxy
 {
     public class BaseProxy
     {
+        public static string DoGet(string url)
+        {
+            return DoGet<BaseRequestDTO>(url, new BaseRequestDTO());
+        }
         public static string DoGet<T>(string url, T obj) where T : BaseRequestDTO
         {
             Trace.TraceInformation("DoGet方法====>请求url={0},请求参数={1}", url, obj.ToString());

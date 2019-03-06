@@ -55,6 +55,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="proxy\baidu\BaiduProxy.cs" />
+    <Compile Include="proxy\baidu\dto\IPConvertRequestDTO.cs" />
+    <Compile Include="proxy\baidu\dto\IPConvertResponseDTO.cs" />
     <Compile Include="proxy\baidu\dto\LGeocoderRequestDTO.cs" />
     <Compile Include="proxy\baidu\dto\LGeocoderResponseDTO.cs" />
     <Compile Include="proxy\baidu\dto\Location.cs" />

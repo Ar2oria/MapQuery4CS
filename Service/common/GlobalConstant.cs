@@ -8,6 +8,6 @@ namespace Service.common
 {
     public class GlobalConstant
     {
-        public const String RETCOORDTYPE = "gcj02ll";
+        public const String RETCOORDTYPEGCJ02 = "gcj02";
     }
 }
