@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="common\AKSNCaculaterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proxy\baidu\BaiduProxyTests.cs" />
     <Compile Include="proxy\BaseProxyyTests.cs" />
   </ItemGroup>
   <ItemGroup>

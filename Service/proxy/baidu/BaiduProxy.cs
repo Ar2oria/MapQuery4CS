@@ -10,8 +10,7 @@ namespace Service.proxy.baidu
     {
         public static List<PlaceSearchResponseDTO> PlaceSearch(PlaceSearchRequestDTO placeSearchRequestDTO)
         {
-
-            return null;
+            return BaseProxy.DoGetWithAutoDeserilize<PlaceSearchRequestDTO, List<PlaceSearchResponseDTO>>(Resources.BaiduMapPlaceSearch, placeSearchRequestDTO);
         }
         
     }

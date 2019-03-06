@@ -100,9 +100,17 @@ namespace Service.proxy.baidu.dto
 
         public override string ToString()
         {
-            if(query==null|| region == null)
+            if(query==null)
             {
-                throw new Exception("参数错误，query或者region其中一个参数为空！");
+                throw new Exception("参数错误，query参数为空！");
+            }
+            if (region == null)
+            {
+                throw new Exception("参数错误，region参数为空！");
+            }
+            if (output == null)
+            {
+                throw new Exception("参数错误，请指定一种输出类型");
             }
             
             return base.ToString();
