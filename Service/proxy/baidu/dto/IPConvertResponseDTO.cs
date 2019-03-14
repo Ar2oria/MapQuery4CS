@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.http.response;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Service.proxy.baidu.dto
 {
-    public class IPConvertResponseDTO
+    public class IPConvertResponseDTO : BaseDTO
     {
         public IPConvertResponseDTO() { }
         private string address;
@@ -16,8 +17,13 @@ namespace Service.proxy.baidu.dto
         public string Address { get => address; set => address = value; }
         public int Status { get => status; set => status = value; }
         public Content Content { get => content; set => content = value; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
-    public class Content
+    public class Content : BaseDTO
     {
         public Content() { }
         private string address;
@@ -27,8 +33,12 @@ namespace Service.proxy.baidu.dto
         public string Address { get => address; set => address = value; }
         public CPoint Point { get => point; set => point = value; }
         public AddressDetail Address_detail { get => address_detail; set => address_detail = value; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
-    public class AddressDetail
+    public class AddressDetail : BaseDTO
     {
         public AddressDetail() { }
         private string city;
@@ -44,10 +54,14 @@ namespace Service.proxy.baidu.dto
         public string Province { get => province; set => province = value; }
         public string Street { get => street; set => street = value; }
         public string Street_number { get => street_number; set => street_number = value; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
 
-    public class CPoint
+    public class CPoint : BaseDTO
     {
         public CPoint() { }
         private string x;
@@ -55,5 +69,9 @@ namespace Service.proxy.baidu.dto
 
         public string X { get => x; set => x = value; }
         public string Y { get => y; set => y = value; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

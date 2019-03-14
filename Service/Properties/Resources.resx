@@ -129,6 +129,16 @@
   <data name="BaiduMapPlaceSearch" xml:space="preserve">
     <value>/place/v2/search</value>
   </data>
+  <data name="JMapQuery" xml:space="preserve">
+    <value>/lib/map-query.jar</value>
+  </data>
+  <data name="Lib" xml:space="preserve">
+    <value>/lib</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="map_query" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\map-query.jar;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="MyAk" xml:space="preserve">
     <value>Y1XohU4UQoppPo2eRjmdm9ed72qPwKp9</value>
   </data>
@@ -137,5 +147,14 @@
   </data>
   <data name="MySk" xml:space="preserve">
     <value>bsCILEjczffn6Fjfq9SXeyVjh5fGHljh</value>
+  </data>
+  <data name="JMapQueryBaseUrl" xml:space="preserve">
+    <value>http://127.0.0.1:8081</value>
+  </data>
+  <data name="JMapQueryHealthCheck" xml:space="preserve">
+    <value>/healthCheck</value>
+  </data>
+  <data name="JMapQueryPid" xml:space="preserve">
+    <value>/pid</value>
   </data>
 </root>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.http.response;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Service.proxy.baidu.dto
 {
-    public class RGeocoderResponseDTO
+    public class RGeocoderResponseDTO : BaseDTO
     {
         public RGeocoderResponseDTO() { }
         /**
@@ -44,9 +45,14 @@ namespace Service.proxy.baidu.dto
         public List<Poi> Pois { get => pois; set => pois = value; }
         public List<PoiRegion> PoiRegions { get => poiRegions; set => poiRegions = value; }
         public string Sematic_description { get => sematic_description; set => sematic_description = value; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
-    public class AddressComponent
+    public class AddressComponent : BaseDTO
     {
         public AddressComponent() { }
 
@@ -113,9 +119,14 @@ namespace Service.proxy.baidu.dto
         public int City_level { get => city_level; set => city_level = value; }
         public string Country_code_iso { get => country_code_iso; set => country_code_iso = value; }
         public string Country_code_iso2 { get => country_code_iso2; set => country_code_iso2 = value; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
-    public class Poi
+    public class Poi:BaseDTO
     {
         public Poi() { }
         private string addr;
@@ -144,8 +155,12 @@ namespace Service.proxy.baidu.dto
         public string Zip { get => zip; set => zip = value; }
         public Poi Parent_poi { get => parent_poi; set => parent_poi = value; }
 
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
-    public class PoiRegion
+    public class PoiRegion:BaseDTO
     {
         public PoiRegion() { }
         private string direction_desc;
@@ -157,9 +172,13 @@ namespace Service.proxy.baidu.dto
         public string Name { get => name; set => name = value; }
         public string Tag { get => tag; set => tag = value; }
         public string Uid { get => uid; set => uid = value; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
-    public class Point
+    public class Point:BaseDTO
     {
         public Point() { }
 
@@ -168,6 +187,10 @@ namespace Service.proxy.baidu.dto
 
         public double X { get => x; set => x = value; }
         public double Y { get => y; set => y = value; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 
 }

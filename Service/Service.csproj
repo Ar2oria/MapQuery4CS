@@ -66,6 +66,8 @@
     <Compile Include="proxy\baidu\dto\RGeocoderResponseDTO.cs" />
     <Compile Include="proxy\baidu\dto\SharpPSResponseDTO.cs" />
     <Compile Include="proxy\BaseProxy.cs" />
+    <Compile Include="rpc-service\impl\RpcServiceImpl.cs" />
+    <Compile Include="rpc-service\IRpcService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="common\utils\" />
@@ -85,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map-query.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

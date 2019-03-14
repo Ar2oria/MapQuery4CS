@@ -97,6 +97,61 @@ namespace Service.Properties {
         }
         
         /// <summary>
+        ///   查找类似 /lib/map-query.jar 的本地化字符串。
+        /// </summary>
+        public static string JMapQuery {
+            get {
+                return ResourceManager.GetString("JMapQuery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 http://127.0.0.1:8081 的本地化字符串。
+        /// </summary>
+        public static string JMapQueryBaseUrl {
+            get {
+                return ResourceManager.GetString("JMapQueryBaseUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 /healthCheck 的本地化字符串。
+        /// </summary>
+        public static string JMapQueryHealthCheck {
+            get {
+                return ResourceManager.GetString("JMapQueryHealthCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 /pid 的本地化字符串。
+        /// </summary>
+        public static string JMapQueryPid {
+            get {
+                return ResourceManager.GetString("JMapQueryPid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 /lib 的本地化字符串。
+        /// </summary>
+        public static string Lib {
+            get {
+                return ResourceManager.GetString("Lib", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Byte[] 类型的本地化资源。
+        /// </summary>
+        public static byte[] map_query {
+            get {
+                object obj = ResourceManager.GetObject("map_query", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Y1XohU4UQoppPo2eRjmdm9ed72qPwKp9 的本地化字符串。
         /// </summary>
         public static string MyAk {

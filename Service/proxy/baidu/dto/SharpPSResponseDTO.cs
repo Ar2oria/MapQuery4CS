@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.http.response;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Service.proxy.baidu.dto
 {
-    public class SharpPSResponseDTO
+    public class SharpPSResponseDTO:BaseDTO
     {
         public SharpPSResponseDTO() { }
         private string name;
@@ -28,5 +29,9 @@ namespace Service.proxy.baidu.dto
         public string Street_id { get => street_id; set => street_id = value; }
         public int Detail { get => detail; set => detail = value; }
         public string Uid { get => uid; set => uid = value; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

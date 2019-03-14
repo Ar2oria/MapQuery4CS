@@ -11,7 +11,7 @@ namespace Service.proxy.baidu
     {
         public static List<PlaceSearchResponseDTO> PlaceSearch(PlaceSearchRequestDTO placeSearchRequestDTO)
         {
-            if (placeSearchRequestDTO.Query == null)
+            if (placeSearchRequestDTO.Query == null || placeSearchRequestDTO.Query.Trim()=="")
             {
                 throw new System.Exception("Query必须不能为空值！");
             }
@@ -41,7 +41,11 @@ namespace Service.proxy.baidu
             SingleResponseDTO<LGeocoderResponseDTO> obj = (SingleResponseDTO<LGeocoderResponseDTO>)BaseProxy.DoGetWithDeserilizeManual(Resources.BaiduMapGeocoder, lGeocoderRequestDTO, typeof(SingleResponseDTO<LGeocoderResponseDTO>));
             if (obj == null || obj.Result == null)
             {
-                throw new System.Exception("LGeocoderResponseDTO函数====>解析异常！，请求参数" + lGeocoderRequestDTO.ToString());
+                if (obj.Status != 1)
+                {
+                    throw new System.Exception("LGeocoderResponseDTO函数====>解析异常！，请求参数" + lGeocoderRequestDTO.ToString());
+                }
+
             }
             return obj.Result;
         }

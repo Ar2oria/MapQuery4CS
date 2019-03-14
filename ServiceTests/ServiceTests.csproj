@@ -60,6 +60,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="proxy\baidu\BaiduProxyTests.cs" />
     <Compile Include="proxy\BaseProxyTests.cs" />
+    <Compile Include="rpc-service\impl\RpcServiceImplTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

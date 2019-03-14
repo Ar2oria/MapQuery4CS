@@ -60,6 +60,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="serviceManager\ServiceManagerTests.cs" />
+    <Compile Include="utils\CmdUtilsTests.cs" />
     <Compile Include="utils\HttpRequestUtilTests.cs" />
   </ItemGroup>
   <ItemGroup>
