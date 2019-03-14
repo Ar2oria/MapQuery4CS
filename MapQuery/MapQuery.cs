@@ -23,14 +23,14 @@ namespace MapQuery
         public MapQuery()
         {
             InitializeComponent();
-            rpcService.InitService();
-            rpcService.JMapQuerySupervisor();
-            LoadStatus();
+            //rpcService.InitService();
+            //rpcService.JMapQuerySupervisor();
+            //LoadStatus();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            rpcService.CloseJMapQuery();
+            //rpcService.CloseJMapQuery();
             openService.Enabled = true;
             closeService.Enabled = false;
             label1.Text = "服务已关闭.";
@@ -38,8 +38,8 @@ namespace MapQuery
 
         private void button2_Click(object sender, EventArgs e)
         {
-            rpcService.StartJMapQuery();
-            rpcService.JMapQuerySupervisor();
+            //rpcService.StartJMapQuery();
+            //rpcService.JMapQuerySupervisor();
             openService.Enabled = false;
             closeService.Enabled = true;
             label1.Text = "服务正在启动.";
